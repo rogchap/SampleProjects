@@ -1,0 +1,321 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DB2F398013A20E6000AE2005 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB2F397F13A20E6000AE2005 /* UIKit.framework */; };
+		DB2F398213A20E6000AE2005 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB2F398113A20E6000AE2005 /* Foundation.framework */; };
+		DB2F398413A20E6000AE2005 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB2F398313A20E6000AE2005 /* CoreGraphics.framework */; };
+		DB2F398A13A20E6000AE2005 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DB2F398813A20E6000AE2005 /* InfoPlist.strings */; };
+		DB2F398D13A20E6000AE2005 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DB2F398C13A20E6000AE2005 /* main.m */; };
+		DB2F399013A20E6000AE2005 /* ImageManipulationAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DB2F398F13A20E6000AE2005 /* ImageManipulationAppDelegate.m */; };
+		DB2F399313A20E6000AE2005 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB2F399113A20E6000AE2005 /* MainWindow.xib */; };
+		DB2F399E13A20F2E00AE2005 /* PhotoBoothController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB2F399C13A20F2E00AE2005 /* PhotoBoothController.m */; };
+		DB2F399F13A20F2E00AE2005 /* PhotoBoothController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB2F399D13A20F2E00AE2005 /* PhotoBoothController.xib */; };
+		DB2F39A313A2108100AE2005 /* frame.png in Resources */ = {isa = PBXBuildFile; fileRef = DB2F39A113A2108100AE2005 /* frame.png */; };
+		DB2F39A413A2108100AE2005 /* frame@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DB2F39A213A2108100AE2005 /* frame@2x.png */; };
+		DB2F39AE13A212E500AE2005 /* steve.png in Resources */ = {isa = PBXBuildFile; fileRef = DB2F39AD13A212E500AE2005 /* steve.png */; };
+		DB2F39B113A2244D00AE2005 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB2F39B013A2244D00AE2005 /* QuartzCore.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		DB2F397B13A20E6000AE2005 /* ImageManipulation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageManipulation.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB2F397F13A20E6000AE2005 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		DB2F398113A20E6000AE2005 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		DB2F398313A20E6000AE2005 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		DB2F398713A20E6000AE2005 /* ImageManipulation-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ImageManipulation-Info.plist"; sourceTree = "<group>"; };
+		DB2F398913A20E6000AE2005 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DB2F398B13A20E6000AE2005 /* ImageManipulation-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ImageManipulation-Prefix.pch"; sourceTree = "<group>"; };
+		DB2F398C13A20E6000AE2005 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DB2F398E13A20E6000AE2005 /* ImageManipulationAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageManipulationAppDelegate.h; sourceTree = "<group>"; };
+		DB2F398F13A20E6000AE2005 /* ImageManipulationAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageManipulationAppDelegate.m; sourceTree = "<group>"; };
+		DB2F399213A20E6000AE2005 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		DB2F399B13A20F2E00AE2005 /* PhotoBoothController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoBoothController.h; sourceTree = "<group>"; };
+		DB2F399C13A20F2E00AE2005 /* PhotoBoothController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoBoothController.m; sourceTree = "<group>"; };
+		DB2F399D13A20F2E00AE2005 /* PhotoBoothController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoBoothController.xib; sourceTree = "<group>"; };
+		DB2F39A113A2108100AE2005 /* frame.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = frame.png; path = Resouces/frame.png; sourceTree = SOURCE_ROOT; };
+		DB2F39A213A2108100AE2005 /* frame@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "frame@2x.png"; path = "Resouces/frame@2x.png"; sourceTree = SOURCE_ROOT; };
+		DB2F39AD13A212E500AE2005 /* steve.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = steve.png; path = Resouces/steve.png; sourceTree = SOURCE_ROOT; };
+		DB2F39B013A2244D00AE2005 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DB2F397813A20E6000AE2005 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB2F39B113A2244D00AE2005 /* QuartzCore.framework in Frameworks */,
+				DB2F398013A20E6000AE2005 /* UIKit.framework in Frameworks */,
+				DB2F398213A20E6000AE2005 /* Foundation.framework in Frameworks */,
+				DB2F398413A20E6000AE2005 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DB2F397013A20E6000AE2005 = {
+			isa = PBXGroup;
+			children = (
+				DB2F398513A20E6000AE2005 /* ImageManipulation */,
+				DB2F397E13A20E6000AE2005 /* Frameworks */,
+				DB2F397C13A20E6000AE2005 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DB2F397C13A20E6000AE2005 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DB2F397B13A20E6000AE2005 /* ImageManipulation.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DB2F397E13A20E6000AE2005 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DB2F39B013A2244D00AE2005 /* QuartzCore.framework */,
+				DB2F397F13A20E6000AE2005 /* UIKit.framework */,
+				DB2F398113A20E6000AE2005 /* Foundation.framework */,
+				DB2F398313A20E6000AE2005 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DB2F398513A20E6000AE2005 /* ImageManipulation */ = {
+			isa = PBXGroup;
+			children = (
+				DB2F399913A20EDD00AE2005 /* Controllers */,
+				DB2F399A13A20EE500AE2005 /* Views */,
+				DB2F398E13A20E6000AE2005 /* ImageManipulationAppDelegate.h */,
+				DB2F398F13A20E6000AE2005 /* ImageManipulationAppDelegate.m */,
+				DB2F399113A20E6000AE2005 /* MainWindow.xib */,
+				DB2F398613A20E6000AE2005 /* Supporting Files */,
+				DB2F39A013A2106B00AE2005 /* Resources */,
+			);
+			path = ImageManipulation;
+			sourceTree = "<group>";
+		};
+		DB2F398613A20E6000AE2005 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DB2F398713A20E6000AE2005 /* ImageManipulation-Info.plist */,
+				DB2F398813A20E6000AE2005 /* InfoPlist.strings */,
+				DB2F398B13A20E6000AE2005 /* ImageManipulation-Prefix.pch */,
+				DB2F398C13A20E6000AE2005 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DB2F399913A20EDD00AE2005 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DB2F399B13A20F2E00AE2005 /* PhotoBoothController.h */,
+				DB2F399C13A20F2E00AE2005 /* PhotoBoothController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		DB2F399A13A20EE500AE2005 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DB2F399D13A20F2E00AE2005 /* PhotoBoothController.xib */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		DB2F39A013A2106B00AE2005 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DB2F39AD13A212E500AE2005 /* steve.png */,
+				DB2F39A113A2108100AE2005 /* frame.png */,
+				DB2F39A213A2108100AE2005 /* frame@2x.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DB2F397A13A20E6000AE2005 /* ImageManipulation */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DB2F399613A20E6000AE2005 /* Build configuration list for PBXNativeTarget "ImageManipulation" */;
+			buildPhases = (
+				DB2F397713A20E6000AE2005 /* Sources */,
+				DB2F397813A20E6000AE2005 /* Frameworks */,
+				DB2F397913A20E6000AE2005 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ImageManipulation;
+			productName = ImageManipulation;
+			productReference = DB2F397B13A20E6000AE2005 /* ImageManipulation.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DB2F397213A20E6000AE2005 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = "Storm ID Ltd";
+			};
+			buildConfigurationList = DB2F397513A20E6000AE2005 /* Build configuration list for PBXProject "ImageManipulation" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = DB2F397013A20E6000AE2005;
+			productRefGroup = DB2F397C13A20E6000AE2005 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DB2F397A13A20E6000AE2005 /* ImageManipulation */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DB2F397913A20E6000AE2005 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB2F398A13A20E6000AE2005 /* InfoPlist.strings in Resources */,
+				DB2F399313A20E6000AE2005 /* MainWindow.xib in Resources */,
+				DB2F399F13A20F2E00AE2005 /* PhotoBoothController.xib in Resources */,
+				DB2F39A313A2108100AE2005 /* frame.png in Resources */,
+				DB2F39A413A2108100AE2005 /* frame@2x.png in Resources */,
+				DB2F39AE13A212E500AE2005 /* steve.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DB2F397713A20E6000AE2005 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB2F398D13A20E6000AE2005 /* main.m in Sources */,
+				DB2F399013A20E6000AE2005 /* ImageManipulationAppDelegate.m in Sources */,
+				DB2F399E13A20F2E00AE2005 /* PhotoBoothController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		DB2F398813A20E6000AE2005 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DB2F398913A20E6000AE2005 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		DB2F399113A20E6000AE2005 /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DB2F399213A20E6000AE2005 /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DB2F399413A20E6000AE2005 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		DB2F399513A20E6000AE2005 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		DB2F399713A20E6000AE2005 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ImageManipulation/ImageManipulation-Prefix.pch";
+				INFOPLIST_FILE = "ImageManipulation/ImageManipulation-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 3.2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		DB2F399813A20E6000AE2005 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ImageManipulation/ImageManipulation-Prefix.pch";
+				INFOPLIST_FILE = "ImageManipulation/ImageManipulation-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 3.2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DB2F397513A20E6000AE2005 /* Build configuration list for PBXProject "ImageManipulation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB2F399413A20E6000AE2005 /* Debug */,
+				DB2F399513A20E6000AE2005 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DB2F399613A20E6000AE2005 /* Build configuration list for PBXNativeTarget "ImageManipulation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB2F399713A20E6000AE2005 /* Debug */,
+				DB2F399813A20E6000AE2005 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DB2F397213A20E6000AE2005 /* Project object */;
+}
