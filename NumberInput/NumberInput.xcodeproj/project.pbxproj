@@ -1,0 +1,294 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DB513F8B13CDBE2E0024E3C4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB513F8A13CDBE2E0024E3C4 /* UIKit.framework */; };
+		DB513F8D13CDBE2E0024E3C4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB513F8C13CDBE2E0024E3C4 /* Foundation.framework */; };
+		DB513F8F13CDBE2E0024E3C4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB513F8E13CDBE2E0024E3C4 /* CoreGraphics.framework */; };
+		DB513F9513CDBE2E0024E3C4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DB513F9313CDBE2E0024E3C4 /* InfoPlist.strings */; };
+		DB513F9813CDBE2E0024E3C4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DB513F9713CDBE2E0024E3C4 /* main.m */; };
+		DB513F9B13CDBE2E0024E3C4 /* NumberInputAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DB513F9A13CDBE2E0024E3C4 /* NumberInputAppDelegate.m */; };
+		DB513F9E13CDBE2E0024E3C4 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB513F9C13CDBE2E0024E3C4 /* MainWindow.xib */; };
+		DB513FA713CDBE990024E3C4 /* NumberInputView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB513FA613CDBE990024E3C4 /* NumberInputView.xib */; };
+		DB513FAA13CDBEBC0024E3C4 /* NumberInputController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB513FA913CDBEBC0024E3C4 /* NumberInputController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		DB513F8613CDBE2E0024E3C4 /* NumberInput.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NumberInput.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB513F8A13CDBE2E0024E3C4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		DB513F8C13CDBE2E0024E3C4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		DB513F8E13CDBE2E0024E3C4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		DB513F9213CDBE2E0024E3C4 /* NumberInput-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NumberInput-Info.plist"; sourceTree = "<group>"; };
+		DB513F9413CDBE2E0024E3C4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DB513F9613CDBE2E0024E3C4 /* NumberInput-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NumberInput-Prefix.pch"; sourceTree = "<group>"; };
+		DB513F9713CDBE2E0024E3C4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DB513F9913CDBE2E0024E3C4 /* NumberInputAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NumberInputAppDelegate.h; sourceTree = "<group>"; };
+		DB513F9A13CDBE2E0024E3C4 /* NumberInputAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NumberInputAppDelegate.m; sourceTree = "<group>"; };
+		DB513F9D13CDBE2E0024E3C4 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		DB513FA613CDBE990024E3C4 /* NumberInputView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NumberInputView.xib; sourceTree = "<group>"; };
+		DB513FA813CDBEBC0024E3C4 /* NumberInputController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NumberInputController.h; sourceTree = "<group>"; };
+		DB513FA913CDBEBC0024E3C4 /* NumberInputController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NumberInputController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DB513F8313CDBE2E0024E3C4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB513F8B13CDBE2E0024E3C4 /* UIKit.framework in Frameworks */,
+				DB513F8D13CDBE2E0024E3C4 /* Foundation.framework in Frameworks */,
+				DB513F8F13CDBE2E0024E3C4 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DB513F7B13CDBE2E0024E3C4 = {
+			isa = PBXGroup;
+			children = (
+				DB513F9013CDBE2E0024E3C4 /* NumberInput */,
+				DB513F8913CDBE2E0024E3C4 /* Frameworks */,
+				DB513F8713CDBE2E0024E3C4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DB513F8713CDBE2E0024E3C4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DB513F8613CDBE2E0024E3C4 /* NumberInput.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DB513F8913CDBE2E0024E3C4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DB513F8A13CDBE2E0024E3C4 /* UIKit.framework */,
+				DB513F8C13CDBE2E0024E3C4 /* Foundation.framework */,
+				DB513F8E13CDBE2E0024E3C4 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DB513F9013CDBE2E0024E3C4 /* NumberInput */ = {
+			isa = PBXGroup;
+			children = (
+				DB513FA513CDBE4C0024E3C4 /* Controllers */,
+				DB513FA413CDBE470024E3C4 /* Views */,
+				DB513F9913CDBE2E0024E3C4 /* NumberInputAppDelegate.h */,
+				DB513F9A13CDBE2E0024E3C4 /* NumberInputAppDelegate.m */,
+				DB513F9C13CDBE2E0024E3C4 /* MainWindow.xib */,
+				DB513F9113CDBE2E0024E3C4 /* Supporting Files */,
+			);
+			path = NumberInput;
+			sourceTree = "<group>";
+		};
+		DB513F9113CDBE2E0024E3C4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DB513F9213CDBE2E0024E3C4 /* NumberInput-Info.plist */,
+				DB513F9313CDBE2E0024E3C4 /* InfoPlist.strings */,
+				DB513F9613CDBE2E0024E3C4 /* NumberInput-Prefix.pch */,
+				DB513F9713CDBE2E0024E3C4 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DB513FA413CDBE470024E3C4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DB513FA613CDBE990024E3C4 /* NumberInputView.xib */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		DB513FA513CDBE4C0024E3C4 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DB513FA813CDBEBC0024E3C4 /* NumberInputController.h */,
+				DB513FA913CDBEBC0024E3C4 /* NumberInputController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DB513F8513CDBE2E0024E3C4 /* NumberInput */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DB513FA113CDBE2E0024E3C4 /* Build configuration list for PBXNativeTarget "NumberInput" */;
+			buildPhases = (
+				DB513F8213CDBE2E0024E3C4 /* Sources */,
+				DB513F8313CDBE2E0024E3C4 /* Frameworks */,
+				DB513F8413CDBE2E0024E3C4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NumberInput;
+			productName = NumberInput;
+			productReference = DB513F8613CDBE2E0024E3C4 /* NumberInput.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DB513F7D13CDBE2E0024E3C4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = "Storm ID Ltd";
+			};
+			buildConfigurationList = DB513F8013CDBE2E0024E3C4 /* Build configuration list for PBXProject "NumberInput" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = DB513F7B13CDBE2E0024E3C4;
+			productRefGroup = DB513F8713CDBE2E0024E3C4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DB513F8513CDBE2E0024E3C4 /* NumberInput */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DB513F8413CDBE2E0024E3C4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB513F9513CDBE2E0024E3C4 /* InfoPlist.strings in Resources */,
+				DB513F9E13CDBE2E0024E3C4 /* MainWindow.xib in Resources */,
+				DB513FA713CDBE990024E3C4 /* NumberInputView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DB513F8213CDBE2E0024E3C4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB513F9813CDBE2E0024E3C4 /* main.m in Sources */,
+				DB513F9B13CDBE2E0024E3C4 /* NumberInputAppDelegate.m in Sources */,
+				DB513FAA13CDBEBC0024E3C4 /* NumberInputController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		DB513F9313CDBE2E0024E3C4 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DB513F9413CDBE2E0024E3C4 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		DB513F9C13CDBE2E0024E3C4 /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DB513F9D13CDBE2E0024E3C4 /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DB513F9F13CDBE2E0024E3C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		DB513FA013CDBE2E0024E3C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		DB513FA213CDBE2E0024E3C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NumberInput/NumberInput-Prefix.pch";
+				INFOPLIST_FILE = "NumberInput/NumberInput-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		DB513FA313CDBE2E0024E3C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NumberInput/NumberInput-Prefix.pch";
+				INFOPLIST_FILE = "NumberInput/NumberInput-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DB513F8013CDBE2E0024E3C4 /* Build configuration list for PBXProject "NumberInput" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB513F9F13CDBE2E0024E3C4 /* Debug */,
+				DB513FA013CDBE2E0024E3C4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DB513FA113CDBE2E0024E3C4 /* Build configuration list for PBXNativeTarget "NumberInput" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB513FA213CDBE2E0024E3C4 /* Debug */,
+				DB513FA313CDBE2E0024E3C4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DB513F7D13CDBE2E0024E3C4 /* Project object */;
+}
