@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-gb">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<title>NodeChat</title>
+		<meta name="author" content="Roger Chapman" />
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js "></script>
+		<script src="/socket.io/socket.io.js"></script>
+		<style>
+			
+			html {
+				height: 100%;
+			}
+			body {
+				background-color: #1c1c1c;
+				color: white;
+				font-family: "Courier New", Courier, monospace;
+				height: 100%;
+				margin: 0;
+			}
+			
+			ul {
+				list-style: none;
+				padding-left: 10px;
+				padding-right: 10px;
+			}
+			
+			.container {
+				height: 100%;
+			}
+			
+			.msgOutput {
+				font-size: 120%;
+				height: 100%;
+				width: 100%;
+			}
+			
+			.msgOutput div.outputWrapper {
+				padding: 10px 200px 100px 10px;
+			}
+			
+			.users {
+				padding-top:10px;
+				position:fixed;
+				right:0px;
+				width:200px;
+			}
+			
+			.msgInput {
+				background-color:#1c1c1c;
+				bottom:0px;
+				clear: left;
+				font-size:130%;
+				font-weight:bold;
+				height: 100px;
+				width:98.5%;
+				position: fixed;
+			}
+			
+			.msgInput div.textwrapper {
+				padding: 10px;
+				width: 100%;
+			}
+			.msgInput span {
+				display: inline-block;
+				margin-top: 4px;
+				vertical-align: top;
+			}
+			
+			.msgInput textarea {
+				background-color:transparent;
+				border: none;
+				color: white;
+				font-size:130%;
+				height:70px;
+				outline: none;
+				overflow:hidden;
+				resize:none;
+				width:95%;
+			}
+			#chatWindow span {
+				margin-right: 10px;
+			}
+		</style>
+		<script type="text/javascript">
+			$(function(){
+				var username = '';
+				var socket = io.connect();
+				var inputText = $('#inputText');
+				var chat = $('#chatWindow');
+				var users = $('#userlist');
+				
+				inputText.keydown(function(e){
+					if(e.keyCode === 13) {
+						 e.preventDefault();
+						 
+						 if(username === ''){
+						 	socket.emit('set username', inputText.val(), function(u){
+						 		username = u;
+						 	});
+						 } else {
+						 	socket.emit('msg', inputText.val());
+						 }
+						 
+						inputText.val('');
+					}
+				});
+				inputText.focus();
+				
+				$(document).click(function() { inputText.focus() });
+				
+				var displayMessage = function(data){
+					var message = $('<div>');
+					message.append($('<span>').text(data.date));
+					var userSpan = $('<span>').css('color', data.user.color).text(data.user.username);
+					if(username === data.user.username){
+						userSpan.css('font-weight', 'bold');
+					}
+					message.append(userSpan);
+					message.append($('<span>').text(data.msg));
+					chat.append(message);
+					window.scrollTo(0, document.body.scrollHeight);
+				}
+				
+				var displaySystemMessage = function(msg) {
+					var data = {'user':{'username':'NodeChat', 'color':'#ff0000'}, 'msg':msg};
+					displayMessage(data);
+				}
+				
+				socket.on('connect', function(){
+					if(username){
+						socket.emit('set username', username);
+					} else {
+						chat.html('<strong>Welcome to NodeChat.<\/strong><br \/>Please enter a username:');
+					}
+				});
+				
+				socket.on('msg', function(data){
+					if(username !== '') {
+						displayMessage(data);
+					}
+				});
+				
+				socket.on('error', function(data){
+					displayMessage(data);
+				}); 
+				
+				socket.on('userlist', function(data){
+					users.html(''); 
+					for (var i in data) {
+						var listItem = $('<li>').css('color', data[i].color).text(data[i].username);
+						if(data[i].username === username) {
+							listItem.css('font-weight','bold');
+						}
+          				users.append(listItem);
+       				 }
+				});
+				
+				socket.on('disconnect', function(){
+					displaySystemMessage('Lost connection with server');
+				});
+				
+				socket.on('reconnecting', function () {
+        			displaySystemMessage('Attempting to re-connect...');
+      			});
+				
+				socket.on('reconnect', function () {
+			        displaySystemMessage('Reconnected to the server');
+			      });
+			});
+		</script>
+	</head>
+	<body>
+		<div class="container">
+			<div class="msgInput">
+				<div class="textwrapper">
+					<span>&gt;&nbsp;</span><textarea id="inputText"></textarea>
+				</div>
+			</div>
+			<div class="users">
+				<span>Users online:</span>
+				<ul id="userlist">
+				</ul>
+			</div>
+			<div class="msgOutput">
+				<div id="chatWindow" class="outputWrapper">
+					
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
