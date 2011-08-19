@@ -1,0 +1,9 @@
+{
+    "name": "NodeDrawing"
+  , "version": "0.0.1"
+  , "private": true
+  , "dependencies": {
+      "express": "2.3.12"
+    , "socket.io": "0.7.8"
+  }
+}
