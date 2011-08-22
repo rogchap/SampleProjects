@@ -1,8 +1,46 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+html {
+	height: 100%;
 }
 
-a {
-  color: #00B7FF;
+body {
+  height: 100%;
+  margin: 0;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color:#111122;
+  color: white;
+}
+
+h2 {
+	margin-top: 0;
+}
+
+.container{
+	height: 100%;
+	width: 100%;
+	text-align: center;
+}
+
+.canvaswrapper {
+		padding: 20px;
+}
+
+canvas {
+	width:600px;
+	height: 600px;
+	border: 1px solid black;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+	background-color: #AEBDCC;
+}
+
+#codenumber {
+	font-size: 20pt;
+	font-weight: bold;
+	padding: 10px;
+	display: block;
+}
+#infoText {
+	height: 50px;
 }

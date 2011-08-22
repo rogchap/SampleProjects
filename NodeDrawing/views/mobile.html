@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-gb">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=no;"/>
+	<meta name="apple-mobile-web-app-capable" content="yes"/>
+	<title>Node Drawing</title>
+	<meta name="author" content="Roger Chapman" />
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js "></script>
+	<script src="/socket.io/socket.io.js"></script>
+	<link rel="stylesheet" href="/stylesheets/mobile.css" type="text/css" media="screen" />
+	<script>
+		$(function(){
+			
+			var codeInput = $('#codeInput');
+			var enterCode = $('#enterCode');
+			var codeNumber = $('#codenumber');
+			
+			var socket = io.connect(location.host + "/mobile");
+			
+			enterCode.click(function() {
+				
+				var submitCode = codeInput.val();
+				if(submitCode != ''){
+					
+					socket.emit('set code', submitCode, function(){
+						
+						var sendTouchEvent = function(e) {
+							
+							data = {
+								type:e.type, 
+								coors:{
+							      x: event.targetTouches[0].pageX/2,
+							      y: event.targetTouches[0].pageY/2
+							   	}
+							 };
+							socket.emit('touchEvent', data);
+							e.preventDefault();
+						};
+						
+						$('.container').html('<h2>Connected<\/h2>');
+						
+						document.addEventListener('touchstart', sendTouchEvent );
+						document.addEventListener('touchmove', sendTouchEvent );
+						document.addEventListener('touchend', sendTouchEvent );
+					});
+					
+				}
+				
+			});
+			
+			
+			
+			
+			
+			socket.on('code', function(data){
+				codeNumber.text(data);
+			});
+			
+		});
+	</script>
+</head>
+<body>
+	<div class="container">
+		<input id="codeInput" type="number" /><input type="button" id="enterCode" value="Enter" />
+	</div>
+</body>
+</html>

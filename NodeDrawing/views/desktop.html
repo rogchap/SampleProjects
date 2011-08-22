@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-gb">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<title>Node Drawing</title>
+	<meta name="author" content="Roger Chapman" />
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js "></script>
+	<script src="/socket.io/socket.io.js"></script>
+	<link rel="stylesheet" href="/stylesheets/style.css" type="text/css" media="screen" />
+	<script type="text/javascript">
+		$(function(){
+			var socket = io.connect(location.host + "/desktop");
+			var codeNumber = $('#codenumber');
+			var infoText = $('#infoText');
+			
+			var canvas = document.getElementById('sketchpad');
+			var context = canvas.getContext('2d');
+			
+			var drawer = {
+			   isDrawing: false,
+			   touchstart: function(coors){
+			      context.beginPath();
+			      context.moveTo(coors.x, coors.y);
+			      this.isDrawing = true;
+			   },
+			   touchmove: function(coors){
+			      if (this.isDrawing) {
+			         context.lineTo(coors.x, coors.y);
+			         context.stroke();
+			      }
+			   },
+			   touchend: function(coors){
+			      if (this.isDrawing) {
+			         this.touchmove(coors);
+			         this.isDrawing = false;
+			      }
+			   }
+			};
+			
+			socket.on('code', function(data){
+				codeNumber.text(data);
+			});
+			
+			socket.on('mobile connected', function(){
+				infoText.html('<h3>Mobile connected<\/h3>Use your mobile\'s touch screen to draw in the space below:')
+			});
+			
+			socket.on('touchEvent', function(data){
+				drawer[data.type](data.coors);
+			});
+			
+		});
+	</script>
+</head>
+<body>
+	<div class="container">
+		<div class="canvaswrapper">
+			<div class="innerwrapper">
+				<h2>Welcome to Node Drawing</h2>
+				<div id="infoText">
+					Visit this site on your mobile (iPhone &amp; Android) and enter code:
+					<span id="codenumber">0000</span>
+				</div>
+				<canvas id="sketchpad"></canvas>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
