@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en-gb">
 <head>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-	<title>Node Drawing</title>
+	<title>rogchap's oode Drawing</title>
 	<meta name="author" content="Roger Chapman" />
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js "></script>
 	<script src="/socket.io/socket.io.js"></script>
@@ -11,6 +11,7 @@
 		$(function(){
 			var socket = io.connect(location.host + "/desktop");
 			var codeNumber = $('#codenumber');
+      var clearBtn = $('#clearBtn');
 			var infoText = $('#infoText');
 			
 			var canvas = document.getElementById('sketchpad');
@@ -20,12 +21,13 @@
 			   isDrawing: false,
 			   touchstart: function(coors){
 			      context.beginPath();
-			      context.moveTo(coors.x, coors.y);
+			      context.moveTo(coors.x*2, coors.y*2);
 			      this.isDrawing = true;
 			   },
 			   touchmove: function(coors){
 			      if (this.isDrawing) {
-			         context.lineTo(coors.x, coors.y);
+			         context.lineTo(coors.x*2, coors.y*2);
+               context.lineWidth = 3;
 			         context.stroke();
 			      }
 			   },
@@ -36,6 +38,10 @@
 			      }
 			   }
 			};
+
+      clearBtn.click(function(){
+        context.clearRect(0,0,320,440);  
+      });
 			
 			socket.on('code', function(data){
 				codeNumber.text(data);
@@ -56,12 +62,13 @@
 	<div class="container">
 		<div class="canvaswrapper">
 			<div class="innerwrapper">
-				<h2>Welcome to Node Drawing</h2>
+				<h2>Welcome to rogchap's Node Drawing</h2>
 				<div id="infoText">
 					Visit this site on your mobile (iPhone &amp; Android) and enter code:
 					<span id="codenumber">0000</span>
 				</div>
-				<canvas id="sketchpad"></canvas>
+				<canvas id="sketchpad" width="320px" height="440px"></canvas>
+        <input type="button" id="clearBtn" value="clear"/>
 			</div>
 		</div>
 	</div>

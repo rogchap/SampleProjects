@@ -3,6 +3,9 @@
  * Module dependencies.
  */
 
+// Cloud app fix.
+require.paths.unshift('./node_modules');
+
 var express = require('express'),
 	socketio = require('socket.io');
 
@@ -47,7 +50,7 @@ app.get('/', function(req, res){
 	}
 });
 
-app.listen(3000);
+app.listen(process.env.VMC_APP_PORT || 3000);
 console.log("Server listening on port %d in %s mode", app.address().port, app.settings.env);
 
 // private methods
