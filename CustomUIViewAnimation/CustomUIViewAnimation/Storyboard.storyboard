@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Xfw-VS-uWq">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+    </dependencies>
+    <scenes>
+        <!--Root View Controller-->
+        <scene sceneID="FIS-5a-hdi">
+            <objects>
+                <viewController id="Xfw-VS-uWq" customClass="RCRootViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1Yx-Sh-XEF">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MjB-CY-nKi" customClass="RCArrowControl">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="287" type="user" id="64e-MU-LHW"/>
+                                    <constraint firstAttribute="height" constant="209" type="user" id="gf7-b9-X4Y"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="touchedArrow:" destination="Xfw-VS-uWq" eventType="touchUpInside" id="3D7-PT-6RX"/>
+                                </connections>
+                            </view>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="OFF" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kd0-ej-duz">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="ON" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zz1-kZ-la4">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="MjB-CY-nKi" secondAttribute="bottom" constant="97" type="user" id="Zid-j0-fnB"/>
+                            <constraint firstItem="MjB-CY-nKi" firstAttribute="centerX" secondItem="1Yx-Sh-XEF" secondAttribute="centerX" type="default" id="cbf-bk-Zpu"/>
+                            <constraint firstItem="MjB-CY-nKi" firstAttribute="top" secondItem="kd0-ej-duz" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="eDq-Hb-EWk"/>
+                            <constraint firstItem="zz1-kZ-la4" firstAttribute="baseline" secondItem="kd0-ej-duz" secondAttribute="baseline" type="default" id="ila-ON-wKc"/>
+                            <constraint firstItem="kd0-ej-duz" firstAttribute="leading" secondItem="1Yx-Sh-XEF" secondAttribute="leading" constant="29" id="yeN-cf-KHh"/>
+                            <constraint firstAttribute="trailing" secondItem="zz1-kZ-la4" secondAttribute="trailing" constant="33" id="yhr-fM-L6b"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pA3-ih-H6v" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="161" y="57"/>
+        </scene>
+    </scenes>
+    <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="RCArrowControl" superclassName="UIControl">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/RCArrowControl.h"/>
+        </class>
+        <class className="RCRootViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/RCRootViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="touchedArrow:" candidateClass="RCArrowControl"/>
+            </relationships>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
